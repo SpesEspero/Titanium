@@ -40,6 +40,11 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="ellipse__wrap">
+      <div class="ellipse ellipse__1"></div>
+      <div class="ellipse ellipse__2"></div>
+    </div>
+
     <div class="common__wrap banner active" id="banner">
       <div class="banner__info">
         <span class="banner__title">
@@ -137,7 +142,7 @@
           <img
             class="intro__image"
             src="./static/images/intro/image.png"
-            alt="Торговый робот"
+            alt="Приложение"
             width="612"
             height="597"
           />
@@ -162,7 +167,128 @@
           </button>
         </div>
       </section>
+
+      <section class="common__wrap how_it_works">
+        <div class="how_it_works__info">
+          <h2 class="how_it_works__title">Как это работает</h2>
+
+          <p class="how_it_works__text">
+            Бот разработан для работы на разных временных рамках, автоматически
+            адаптируя свои стратегии под текущие рыночные условия.
+          </p>
+        </div>
+
+        <div class="how_it_works__content">
+          <picture
+            ><source
+              srcset="
+                ./static/images/charts/image-mobile.webp    1x,
+                ./static/images/charts/image-mobile-2x.webp 2x
+              "
+              media="(max-width: 1023px)"
+              type="image/webp" />
+            <source
+              srcset="
+                ./static/images/charts/image-desktop.webp    1x,
+                ./static/images/charts/image-desktop-2x.webp 2x
+              "
+              media="(max-width: 1440px)"
+              type="image/webp" />
+            <source
+              srcset="
+                ./static/images/charts/image-mobile.webp    1x,
+                ./static/images/charts/image-mobile-2x.webp 2x
+              "
+              type="image/webp" />
+            <source
+              srcset="
+                ./static/images/charts/image-mobile.png    1x,
+                ./static/images/charts/image-mobile-2x.png 2x
+              "
+              media="(max-width: 1023px)"
+              type="image/png" />
+            <source
+              srcset="
+                ./static/images/charts/image-desktop.png    1x,
+                ./static/images/charts/image-desktop-2x.png 2x
+              "
+              media="(max-width: 1440px)"
+              type="image/png" />
+            <source
+              srcset="
+                ./static/images/charts/image-mobile.png    1x,
+                ./static/images/charts/image-mobile-2x.png 2x
+              "
+              type="image/png" />
+            <img
+              src=" ./static/images/charts/image-desktop.png"
+              alt="График"
+              loading="lazy"
+              class="how_it_works__image"
+              width="798"
+              height="380"
+          /></picture>
+
+          <div class="how_it_works__explanation">
+            <h3>С Titanium вы получаете:</h3>
+
+            <ul class="how_it_works__list">
+              <li class="how_it_works__item">
+                <h4>Автоматическое Управление Позициями</h4>
+
+                <div class="how_it_works__item__text">
+                  Бот самостоятельно открывает и закрывает торговые позиции,
+                  опираясь на строгие алгоритмы для максимизации прибыли.
+                </div>
+              </li>
+
+              <li class="how_it_works__item">
+                <h4>Гибкая Работа с Лотами</h4>
+
+                <div class="how_it_works__item__text">
+                  Используя уникальную систему мультипликаторов, Titanium
+                  настраивает размеры сделок для оптимизации вашего капитала.
+                </div>
+              </li>
+
+              <li class="how_it_works__item">
+                <h4>Двойная Сетка Торговли</h4>
+
+                <div class="how_it_works__item__text">
+                  Бот эффективно работает с основной и параллельной сетками,
+                  обеспечивая баланс между прибылью и риском.
+                </div>
+              </li>
+
+              <li class="how_it_works__item">
+                <h4>Интеллектуальное Хеджирование</h4>
+
+                <div class="how_it_works__item__text">
+                  После определенного количества сделок бот активирует
+                  хеджирование, защищая ваши инвестиции.
+                </div>
+              </li>
+
+              <li class="how_it_works__item">
+                <h4>Простота в Использовании</h4>
+
+                <div class="how_it_works__item__text">
+                  Не требуется предварительных знаний или постоянного внимания к
+                  торговле — Titanium делает всю работу за вас.
+                </div>
+              </li>
+            </ul>
+
+            <p class="how_it_works__last_word">
+              С Titanium ваш торговый процесс становится проще и эффективнее,
+              позволяя вам сосредоточиться на главном — наращивании вашего
+              капитала.
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
+
     <script src="script.js"></script>
   </body>
 </html>
