@@ -826,6 +826,35 @@ h4 {
   }
 }
 
+/* Result */
+.result {
+  padding-top: 92px;
+}
+
+.result__title {
+  text-transform: uppercase;
+}
+
+.result__image {
+  display: block;
+  margin: 32px auto 0;
+
+  max-width: 100%;
+  height: auto;
+}
+
+@media (min-width: 1024px) {
+  .result {
+    padding-top: 200px;
+
+    text-align: center;
+  }
+
+  .result__image {
+    margin-top: 44px;
+  }
+}
+
 /* Animations */
 @keyframes header-circle-creation {
   0% {
