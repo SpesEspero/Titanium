@@ -120,7 +120,7 @@ h1 {
 .common__wrap {
   padding: var(--main-side-padding);
   margin: 0 auto;
-  max-inline-size: var(--main-max-width);
+  max-width: var(--main-max-width);
 }
 
 .common__button {
@@ -152,6 +152,151 @@ h1 {
 
 .main {
   transition: opacity 0.3s ease-out;
+}
+
+.cross {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 24px;
+  width: 24px;
+  position: relative;
+
+  border-radius: 50%;
+}
+
+.cross__bar {
+  height: 2px;
+  width: 18px;
+  background-color: #fff;
+  border-radius: 10px;
+  transition: 0.4s;
+
+  --bar-height-after-transform: 1.3px;
+  --bar-margin: 6px;
+  --bar-translate-y: calc(
+    (var(--bar-margin) + var(--bar-height-after-transform)) / 2
+  );
+}
+
+.cross__bar:first-child {
+  margin-bottom: var(--bar-margin);
+}
+
+.active .cross__bar:first-child {
+  height: var(--bar-height-after-transform);
+  width: 14px;
+  transform: translateY(var(--bar-translate-y)) rotate(45deg);
+}
+
+.active .cross__bar:last-child {
+  height: var(--bar-height-after-transform);
+  width: 14px;
+  transform: translateY(calc(var(--bar-translate-y) * -1)) rotate(-45deg);
+}
+
+.cross::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  border: 1px solid transparent;
+  border-radius: 50%;
+
+  box-sizing: border-box;
+}
+
+.active .cross::after {
+  animation: header-circle-creation 0.5s forwards;
+}
+
+/* Banner */
+.banner {
+  position: relative;
+  max-width: initial;
+
+  padding-top: 3px;
+  padding-bottom: 10px;
+
+  text-align: center;
+
+  width: 100%;
+
+  background: #2445bb;
+
+  box-shadow: 0px 12px 30px 0px #ffffff1f;
+}
+
+.banner__cross {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+
+  transform: translateY(-50%);
+
+  transition: background 0.15s linear;
+}
+
+.banner__cross:hover,
+.banner__cross:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.banner__title {
+  font-size: 12px;
+
+  border-bottom: 1px solid #ffffff;
+}
+
+.banner__percentage {
+  font-size: 18px;
+  font-weight: 600;
+
+  margin-left: 2px;
+}
+
+.banner__text {
+  margin-top: 4px;
+
+  font-size: 8px;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.banner .banner__cross::after {
+  animation: none;
+  border-color: #fff;
+}
+
+@media (min-width: 1024px) {
+  .banner {
+    padding-top: 10px;
+    padding-bottom: 13px;
+  }
+
+  .banner__info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .banner__title {
+    font-size: 14px;
+  }
+
+  .banner__percentage {
+    font-size: 22px;
+  }
+
+  .banner__text {
+    margin-top: 5px;
+    margin-left: 24px;
+
+    font-size: 14px;
+  }
 }
 
 /* Header */
@@ -211,55 +356,6 @@ h1 {
   pointer-events: auto;
 }
 
-.header__burger {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  height: 24px;
-  width: 24px;
-  position: relative;
-}
-
-.header__burger__bar {
-  height: 2px;
-  width: 18px;
-  background-color: #fff;
-  border-radius: 10px;
-  transition: 0.4s;
-}
-
-.header__burger__bar:first-child {
-  margin-bottom: 6px;
-}
-
-.header.active .header__burger__bar:first-child {
-  width: 12px;
-  transform: translateY(4px) rotate(45deg);
-}
-
-.header.active .header__burger__bar:last-child {
-  width: 12px;
-  transform: translateY(-4px) rotate(-45deg);
-}
-
-.header__burger::after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  position: absolute;
-  border: 2px solid transparent;
-  border-radius: 100%;
-
-  box-sizing: border-box;
-}
-
-.header.active .header__burger::after {
-  animation: header-circle-creation 0.5s forwards;
-}
-
 .header__menu__item__buy {
   margin-top: 40px;
 
@@ -278,7 +374,7 @@ h1 {
     padding-bottom: 24px;
 
     margin: 0 auto;
-    max-inline-size: var(--main-max-width);
+    max-width: var(--main-max-width);
   }
 
   .header__logo {
@@ -397,7 +493,7 @@ h1 {
   .intro__wrap {
     padding: var(--main-side-padding);
     margin: 0 auto;
-    max-inline-size: var(--main-max-width);
+    max-width: var(--main-max-width);
 
     position: relative;
   }

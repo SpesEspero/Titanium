@@ -40,7 +40,24 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="common__wrap header">
+    <div class="common__wrap banner active" id="banner">
+      <div class="banner__info">
+        <span class="banner__title">
+          получите скидку <span class="banner__percentage">50%</span>
+        </span>
+
+        <div class="banner__text">
+          предложение действительно до 30.04.2024 г.
+        </div>
+      </div>
+
+      <button class="cross banner__cross" id="banner-btn">
+        <div class="cross__bar"></div>
+        <div class="cross__bar"></div>
+      </button>
+    </div>
+
+    <header class="common__wrap header" id="header">
       <a href="/">
         <svg
           class="header__logo"
@@ -57,10 +74,10 @@
         </svg>
       </a>
 
-      <div class="header__burger" id="menu-btn">
-        <div class="header__burger__bar"></div>
-        <div class="header__burger__bar"></div>
-      </div>
+      <button class="cross header__burger" id="menu-btn">
+        <div class="cross__bar"></div>
+        <div class="cross__bar"></div>
+      </button>
 
       <ul class="header__menu">
         <li class="header__menu__item">
