@@ -36,3 +36,57 @@ if (Swiper) {
     },
   });
 }
+
+// FAQ
+
+const faqButtons = document.querySelectorAll(".faq__button");
+
+if (faqButtons) {
+  faqButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      button.classList.toggle("active");
+
+      const content = button.nextElementSibling;
+
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
+    });
+  });
+}
+
+// Modal
+
+const modalBtns = document.querySelectorAll(".footer__button");
+
+if (modalBtns) {
+  modalBtns.forEach(function (btn, idx) {
+    btn.addEventListener("click", function () {
+      const modalId = `footer-modal-${idx + 1}`;
+
+      const modal = document.getElementById(modalId);
+
+      if (modal) {
+        modal.classList.add("active");
+      }
+    });
+  });
+}
+
+const closeBtns = document.querySelectorAll(".footer__modal__cross");
+
+if (closeBtns) {
+  closeBtns.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      this.closest(".footer__modal").style.display = "none";
+    });
+  });
+}
+
+window.onclick = function (event) {
+  if (event.target.classList.contains("footer__modal")) {
+    event.target.classList.remove("active");
+  }
+};
