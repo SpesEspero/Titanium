@@ -16,3 +16,23 @@ if (bannerCloseButton && banner) {
     banner.style.display = "none";
   });
 }
+
+// Swiper
+
+if (Swiper) {
+  const swiper = new Swiper(".swiper", {
+    direction: "horizontal",
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    spaceBetween: 16,
+    slidesPerView: "auto",
+    breakpoints: {
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 36,
+      },
+    },
+  });
+}
