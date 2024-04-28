@@ -260,6 +260,29 @@ h4 {
   animation: header-circle-creation 0.5s forwards;
 }
 
+.bullet_list__item {
+  position: relative;
+
+  padding-inline-start: 20px;
+
+  margin-bottom: 24px;
+}
+
+.bullet_list__item::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+
+  border-radius: 2px;
+  background: #fff;
+
+  position: absolute;
+
+  top: 11px;
+  left: 0;
+}
+
 /* Ellipses */
 
 .ellipse__wrap {
@@ -675,29 +698,6 @@ h4 {
   margin-top: 24px;
 }
 
-.how_it_works__item {
-  position: relative;
-
-  padding-inline-start: 20px;
-
-  margin-bottom: 24px;
-}
-
-.how_it_works__item::before {
-  content: "";
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-
-  border-radius: 2px;
-  background: #fff;
-
-  position: absolute;
-
-  top: 11px;
-  left: 0;
-}
-
 .how_it_works__item__text {
   margin-top: 8px;
 
@@ -707,6 +707,8 @@ h4 {
 .how_it_works__last_word {
   font-size: 16px;
   font-weight: 600;
+
+  margin-bottom: 0;
 }
 
 @media (min-width: 1024px) {
@@ -945,6 +947,144 @@ h4 {
 
   .reviews__nav .swiper-button-prev {
     left: 0;
+  }
+}
+
+/* Buy */
+.buy {
+  padding-top: 92px;
+}
+
+.buy__title {
+  text-transform: uppercase;
+  margin-bottom: 44px;
+}
+
+.buy__card {
+  display: block;
+
+  border-radius: 4px 4px 36px 4px;
+  border: 1px solid #ffffff;
+
+  padding: 40px 15px;
+
+  margin-bottom: 44px;
+}
+
+.buy__card:last-child {
+  margin-bottom: 0;
+}
+
+.buy__old_price {
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.8);
+
+  position: relative;
+}
+
+.buy__new_price {
+  margin-top: 8px;
+
+  font-size: 32px;
+  line-height: 25px;
+}
+
+.buy__period {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.buy__old_price::after {
+  content: "";
+  display: block;
+
+  width: 47px;
+  height: 3px;
+
+  border-radius: 3px;
+
+  background: #cd2222;
+
+  position: absolute;
+  bottom: 50%;
+  left: 0;
+
+  transform: rotate(-22.5deg) translate(-2px, 50%);
+}
+
+.buy__price {
+  text-align: center;
+  font-weight: 600;
+}
+
+.buy__button {
+  width: 100%;
+
+  justify-content: center;
+}
+
+.buy__card__list {
+  margin: 44px 0;
+}
+
+.buy__card__item {
+  margin-bottom: 8px;
+}
+
+.buy__card__item:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 1024px) {
+  .buy {
+    padding-top: 200px;
+  }
+
+  .buy__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    grid-gap: 36px;
+    gap: 36px;
+  }
+
+  .buy__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 40px 45px;
+
+    margin-bottom: 0;
+  }
+
+  .buy__new_price {
+    margin-top: 12px;
+    font-size: 44px;
+    line-height: 35px;
+  }
+
+  .buy__period {
+    font-size: 20px;
+  }
+
+  .buy__old_price {
+    font-size: 36px;
+  }
+
+  .buy__old_price::after {
+    width: 79.5px;
+
+    transform: rotate(-26deg) translate(-5px, 50%);
+  }
+
+  .buy__card__item {
+    margin-bottom: 12px;
+  }
+
+  .buy__card__list {
+    margin: 64px 0 46px;
   }
 }
 
