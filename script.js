@@ -17,6 +17,32 @@ if (bannerCloseButton && banner) {
   });
 }
 
+// Header scroll
+
+const headerLinks = document.querySelectorAll(".header__menu__link");
+
+if (headerLinks) {
+  headerLinks.forEach(function (link) {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      const id = this.getAttribute("href");
+
+      const elementToScroll = document.querySelector(id);
+
+      if (elementToScroll) {
+        header.classList.remove("active");
+        document.body.classList.remove("lock");
+
+        document.querySelector(id).scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    });
+  });
+}
+
 // Swiper
 
 if (Swiper) {
