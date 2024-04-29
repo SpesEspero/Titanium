@@ -116,3 +116,9 @@ window.onclick = function (event) {
     event.target.classList.remove("active");
   }
 };
+
+// Lightbox
+
+if (baguetteBox) {
+  baguetteBox.run(".gallery");
+}
