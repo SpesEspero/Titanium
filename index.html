@@ -19,15 +19,14 @@
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="./static/favicons/favicon-16x16.png"
+      href="./favicon-16x16.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./static/favicons/favicon-32x32.png"
+      href="./favicon-32x32.png"
     />
-    <link rel="manifest" href="/site.webmanifest" />
     <link
       rel="mask-icon"
       href="./static/favicons/safari-pinned-tab.svg"
@@ -63,9 +62,9 @@
 
     <div class="common__wrap banner active" id="banner">
       <div class="banner__info">
-        <span class="banner__title">
+        <a class="banner__title anchor_link" href="#buy">
           получите скидку <span class="banner__percentage">50%</span>
-        </span>
+        </a>
 
         <div class="banner__text">
           предложение действительно до 30.04.2024 г.
@@ -73,8 +72,8 @@
       </div>
 
       <button class="cross banner__cross" id="banner-btn">
-        <div class="cross__bar"></div>
-        <div class="cross__bar"></div>
+        <span class="cross__bar"></span>
+        <span class="cross__bar"></span>
       </button>
     </div>
 
@@ -96,19 +95,34 @@
       </a>
 
       <button class="cross header__burger" id="menu-btn">
-        <div class="cross__bar"></div>
-        <div class="cross__bar"></div>
+        <span class="cross__bar"></span>
+        <span class="cross__bar"></span>
       </button>
 
       <ul class="header__menu">
         <li class="header__menu__item">
-          <a class="header__menu__link" href="#work">Как это работает</a>
+          <a class="header__menu__link anchor_link" href="#work"
+            >Как это работает</a
+          >
         </li>
         <li class="header__menu__item">
-          <a class="header__menu__link" href="#advantages">Преимущества</a>
+          <a class="header__menu__link anchor_link" href="#advantages"
+            >Преимущества</a
+          >
         </li>
+
         <li class="header__menu__item">
-          <a class="header__menu__link" href="#faq">Вопросы</a>
+          <a class="header__menu__link anchor_link" href="#results"
+            >Результаты</a
+          >
+        </li>
+
+        <li class="header__menu__item">
+          <a class="header__menu__link anchor_link" href="#buy">Покупка</a>
+        </li>
+
+        <li class="header__menu__item">
+          <a class="header__menu__link anchor_link" href="#faq">Вопросы</a>
         </li>
 
         <li class="header__menu__item">
@@ -646,7 +660,7 @@
         </ul>
       </section>
 
-      <section class="common__wrap result">
+      <section class="common__wrap result" id="results">
         <h2 class="result__title">РЕЗУЛЬТАТЫ</h2>
 
         <picture>
@@ -848,7 +862,7 @@
         </div>
       </section>
 
-      <section class="common__wrap buy">
+      <section class="common__wrap buy" id="buy">
         <h2 class="buy__title">Покупка</h2>
 
         <ul class="buy__list">
@@ -1232,8 +1246,8 @@
       <div id="footer-modal-1" class="footer__modal">
         <div class="footer__modal_content">
           <button class="cross footer__modal__cross">
-            <div class="cross__bar"></div>
-            <div class="cross__bar"></div>
+            <span class="cross__bar"></span>
+            <span class="cross__bar"></span>
           </button>
 
           <p>Согласие на обработку персональных данных</p>
@@ -1242,8 +1256,8 @@
       <div id="footer-modal-2" class="footer__modal">
         <div class="footer__modal_content">
           <button class="cross footer__modal__cross">
-            <div class="cross__bar"></div>
-            <div class="cross__bar"></div>
+            <span class="cross__bar"></span>
+            <span class="cross__bar"></span>
           </button>
 
           <p>Политика конфиденциальности</p>
@@ -1253,8 +1267,8 @@
       <div id="footer-modal-3" class="footer__modal">
         <div class="footer__modal_content">
           <button class="cross footer__modal__cross">
-            <div class="cross__bar"></div>
-            <div class="cross__bar"></div>
+            <span class="cross__bar"></span>
+            <span class="cross__bar"></span>
           </button>
 
           <p>Политика возврата денежных средств</p>
@@ -1264,8 +1278,8 @@
       <div id="footer-modal-4" class="footer__modal">
         <div class="footer__modal_content">
           <button class="cross footer__modal__cross">
-            <div class="cross__bar"></div>
-            <div class="cross__bar"></div>
+            <span class="cross__bar"></span>
+            <span class="cross__bar"></span>
           </button>
 
           <p>Пользовательское соглашение</p>
@@ -1275,8 +1289,8 @@
       <div id="footer-modal-5" class="footer__modal">
         <div class="footer__modal_content">
           <button class="cross footer__modal__cross">
-            <div class="cross__bar"></div>
-            <div class="cross__bar"></div>
+            <span class="cross__bar"></span>
+            <span class="cross__bar"></span>
           </button>
 
           <p>Публичная оферта</p>

@@ -17,12 +17,12 @@ if (bannerCloseButton && banner) {
   });
 }
 
-// Header scroll
+// Anchor links scroll
 
-const headerLinks = document.querySelectorAll(".header__menu__link");
+const anchorLinks = document.querySelectorAll(".anchor_link");
 
-if (headerLinks) {
-  headerLinks.forEach(function (link) {
+if (anchorLinks) {
+  anchorLinks.forEach(function (link) {
     link.addEventListener("click", function (e) {
       e.preventDefault();
 
