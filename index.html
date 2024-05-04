@@ -163,7 +163,7 @@
           соотношения риск/прибыль.
         </p>
 
-        <picture>
+        <!-- <picture>
           <source
             srcset="
               ./static/images/intro/image.webp    1x,
@@ -185,7 +185,9 @@
             width="612"
             height="597"
           />
-        </picture>
+        </picture> -->
+
+        <canvas id="canvas3d" class="intro__3d"></canvas>
 
         <div class="intro__wrap__button">
           <a href="#" class="common__button intro__button">
@@ -1328,5 +1330,11 @@
     </div>
 
     <script src="script.js"></script>
+    <script type="module">
+      import { Application } from "./runtime.js";
+      const canvas = document.getElementById("canvas3d");
+      const app = new Application(canvas);
+      app.load("https://prod.spline.design/ZedIYlIM0dgQAYIN/scene.splinecode");
+    </script>
   </body>
 </html>
