@@ -154,6 +154,8 @@
     </header>
 
     <main class="main">
+      <canvas id="canvas3d" class="intro__3d"></canvas>
+
       <section class="intro__wrap">
         <h1 class="intro__title">Titanium<sup>TM</sup></h1>
 
@@ -163,7 +165,7 @@
           соотношения риск/прибыль.
         </p>
 
-        <!-- <picture>
+        <picture>
           <source
             srcset="
               ./static/images/intro/image.webp    1x,
@@ -184,10 +186,9 @@
             alt="Приложение"
             width="612"
             height="597"
+            id="intro-image"
           />
-        </picture> -->
-
-        <canvas id="canvas3d" class="intro__3d"></canvas>
+        </picture>
 
         <div class="intro__wrap__button">
           <a href="#" class="common__button intro__button">
@@ -1331,10 +1332,29 @@
 
     <script src="script.js"></script>
     <script type="module">
-      import { Application } from "./runtime.js";
       const canvas = document.getElementById("canvas3d");
-      const app = new Application(canvas);
-      app.load("https://prod.spline.design/ZedIYlIM0dgQAYIN/scene.splinecode");
+      const introImage = document.getElementById("intro-image");
+
+      if (shouldShow3d) {
+        import("./runtime.js")
+          .then((module) => {
+            const { Application } = module;
+
+            const app = new Application(canvas);
+            app
+              .load(
+                "https://prod.spline.design/ZedIYlIM0dgQAYIN/scene.splinecode"
+              )
+              .catch(() => {
+                introImage.style.display = "block";
+                canvas.style.display = "none";
+              });
+          })
+          .catch(() => {
+            introImage.style.display = "block";
+            canvas.style.display = "none";
+          });
+      }
     </script>
   </body>
 </html>

@@ -122,3 +122,7 @@ window.onclick = function (event) {
 if (baguetteBox) {
   baguetteBox.run(".gallery");
 }
+
+// Should show 3d
+
+window.shouldShow3d = window.innerWidth >= 1024 && window.WebGLRenderingContext;
