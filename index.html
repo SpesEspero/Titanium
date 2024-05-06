@@ -154,7 +154,7 @@
     </header>
 
     <main class="main">
-      <canvas id="canvas3d" class="canvas"></canvas>
+      <canvas id="canvas3d" class="canvas" width="1440" height="1280"></canvas>
 
       <section class="intro__wrap">
         <h1 class="intro__title">Titanium<sup>TM</sup></h1>
@@ -247,55 +247,14 @@
         </div>
 
         <div class="how_it_works__content">
-          <picture
-            ><source
-              srcset="
-                ./static/images/charts/image-mobile.webp    1x,
-                ./static/images/charts/image-mobile-2x.webp 2x
-              "
-              media="(max-width: 1023px)"
-              type="image/webp" />
-            <source
-              srcset="
-                ./static/images/charts/image-desktop.webp    1x,
-                ./static/images/charts/image-desktop-2x.webp 2x
-              "
-              media="(max-width: 1440px)"
-              type="image/webp" />
-            <source
-              srcset="
-                ./static/images/charts/image-mobile.webp    1x,
-                ./static/images/charts/image-mobile-2x.webp 2x
-              "
-              type="image/webp" />
-            <source
-              srcset="
-                ./static/images/charts/image-mobile.png    1x,
-                ./static/images/charts/image-mobile-2x.png 2x
-              "
-              media="(max-width: 1023px)"
-              type="image/png" />
-            <source
-              srcset="
-                ./static/images/charts/image-desktop.png    1x,
-                ./static/images/charts/image-desktop-2x.png 2x
-              "
-              media="(max-width: 1440px)"
-              type="image/png" />
-            <source
-              srcset="
-                ./static/images/charts/image-mobile.png    1x,
-                ./static/images/charts/image-mobile-2x.png 2x
-              "
-              type="image/png" />
-            <img
-              src=" ./static/images/charts/image-desktop.png"
-              alt="График"
-              loading="lazy"
-              class="how_it_works__image"
-              width="798"
-              height="380"
-          /></picture>
+          <video
+            class="how_it_works__video"
+            autoplay
+            loop
+            muted
+            playsinline
+            src="./static/video/chart.mp4"
+          ></video>
 
           <div class="how_it_works__explanation">
             <h3>С Titanium вы получаете:</h3>

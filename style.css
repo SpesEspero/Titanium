@@ -763,7 +763,8 @@ h4 {
   padding: var(--main-side-padding);
 }
 
-.canvas {
+.canvas,
+.canvas__loader {
   display: none;
 }
 
@@ -822,8 +823,9 @@ h4 {
   }
 
   .canvas__loader {
+    display: block;
     position: absolute;
-    top: 50%;
+    top: 55%;
     right: 30%;
   }
 
@@ -855,7 +857,7 @@ h4 {
   margin-top: 44px;
 }
 
-.how_it_works__image {
+.how_it_works__video {
   display: block;
   max-width: 100%;
   height: auto;
@@ -863,6 +865,10 @@ h4 {
   margin: 0 auto;
 
   box-shadow: 20px 60px 60px 0px #00000080;
+
+  border-radius: 16px;
+
+  border: 4px solid #2d2d2d;
 }
 
 .how_it_works__explanation {
@@ -897,17 +903,17 @@ h4 {
     display: grid;
 
     grid-template-columns: auto 440px;
-    grid-gap: 40px;
-    gap: 40px;
+    grid-gap: 20px;
+    gap: 20px;
 
     justify-content: flex-end;
 
     position: relative;
   }
 
-  .how_it_works__image {
+  .how_it_works__video {
     margin: 0;
-    max-width: initial;
+    max-width: 100%;
 
     position: sticky;
 
@@ -936,9 +942,10 @@ h4 {
   }
 }
 
-@media (min-width: 1441px) {
-  .how_it_works__image {
-    max-width: 100%;
+@media (min-width: 1280px) {
+  .how_it_works__content {
+    grid-gap: 40px;
+    gap: 40px;
   }
 }
 
