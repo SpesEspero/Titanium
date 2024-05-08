@@ -114,7 +114,8 @@ h3 {
   margin: 0;
 }
 
-h4 {
+h4,
+.h4 {
   font-size: 18px;
   line-height: 27px;
 
@@ -150,7 +151,8 @@ h4 {
     line-height: 36px;
   }
 
-  h4 {
+  h4,
+  .h4 {
     font-size: 20px;
     line-height: 30px;
   }
@@ -1025,8 +1027,16 @@ h4 {
 
   max-width: 100%;
   height: auto;
+
+  border-radius: 16px;
+  border: 4px solid #2d2d2d;
 }
 
+@media (min-width: 560px) {
+  .result__image {
+    border-width: 6px;
+  }
+}
 @media (min-width: 1024px) {
   .result {
     padding-top: 200px;
@@ -1036,6 +1046,7 @@ h4 {
 
   .result__image {
     margin-top: 44px;
+    border-width: 12px;
   }
 }
 

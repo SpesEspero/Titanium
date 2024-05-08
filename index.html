@@ -42,13 +42,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.0/baguetteBox.min.css"
     />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.0/baguetteBox.min.js"></script>
   </head>
   <body>
     <div class="ellipse__wrap">
@@ -76,14 +74,14 @@
         </div>
       </div>
 
-      <button class="cross banner__cross" id="banner-btn">
+      <button class="cross banner__cross" id="banner-btn" aria-label="close">
         <span class="cross__bar"></span>
         <span class="cross__bar"></span>
       </button>
     </div>
 
     <header class="common__wrap header" id="header">
-      <a href="/">
+      <a href="/" aria-label="home">
         <svg
           class="header__logo"
           xmlns="http://www.w3.org/2000/svg"
@@ -99,7 +97,7 @@
         </svg>
       </a>
 
-      <button class="cross header__burger" id="menu-btn">
+      <button class="cross header__burger" id="menu-btn" aria-label="close">
         <span class="cross__bar"></span>
         <span class="cross__bar"></span>
       </button>
@@ -168,25 +166,42 @@
         <picture>
           <source
             srcset="
-              ./static/images/intro/image.webp    1x,
-              ./static/images/intro/image_2x.webp 2x
+              ./static/images/intro/image_mobile.webp    1x,
+              ./static/images/intro/image_mobile_2x.webp 2x
+            "
+            media="(max-width: 432px)"
+            type="image/webp"
+          />
+          <source
+            srcset="
+              ./static/images/intro/image_desktop.webp    1x,
+              ./static/images/intro/image_desktop_2x.webp 2x
             "
             type="image/webp"
           />
           <source
             srcset="
-              ./static/images/intro/image.png    1x,
-              ./static/images/intro/image_2x.png 2x
+              ./static/images/intro/image_mobile.png    1x,
+              ./static/images/intro/image_mobile_2x.png 2x
+            "
+            media="(max-width: 432px)"
+            type="image/png"
+          />
+          <source
+            srcset="
+              ./static/images/intro/image_desktop.png    1x,
+              ./static/images/intro/image_desktop_2x.png 2x
             "
             type="image/png"
           />
           <img
             class="intro__image"
-            src="./static/images/intro/image.png"
+            src="./static/images/intro/image_desktop.png"
             alt="Приложение"
             width="612"
             height="597"
             id="intro-image"
+            loading="lazy"
           />
         </picture>
 
@@ -659,24 +674,40 @@
         <picture>
           <source
             srcset="
-              ./static/images/result/image.webp    1x,
-              ./static/images/result/image-2x.webp 2x
+              ./static/images/result/image_mobile.webp    1x,
+              ./static/images/result/image_mobile_2x.webp 2x
+            "
+            media="(max-width: 560px)"
+            type="image/webp"
+          />
+          <source
+            srcset="
+              ./static/images/result/image_desktop.webp    1x,
+              ./static/images/result/image_desktop_2x.webp 2x
             "
             type="image/webp"
           />
           <source
             srcset="
-              ./static/images/result/image.png    1x,
-              ./static/images/result/image-2x.png 2x
+              ./static/images/result/image_mobile.jpg    1x,
+              ./static/images/result/image_mobile_2x.jpg 2x
             "
-            type="image/png"
+            media="(max-width: 560px)"
+            type="image/jpg"
+          />
+          <source
+            srcset="
+              ./static/images/result/image_desktop.jpg    1x,
+              ./static/images/result/image_desktop_2x.jpg 2x
+            "
+            type="image/jpeg"
           />
           <img
             class="result__image"
-            src="./static/images/result/image.png"
+            src="./static/images/result/image_desktop.jpg"
             alt="Результат"
-            width="948"
-            height="620"
+            width="924"
+            height="596"
             loading="lazy"
           />
         </picture>
@@ -895,17 +926,17 @@
               </div>
 
               <ul class="buy__card__list">
-                <li class="bullet_list__item buy__card__item">
-                  <h4>Бот для МТ4</h4>
+                <li class="bullet_list__item buy__card__item h4">
+                  Бот для МТ4
                 </li>
-                <li class="bullet_list__item buy__card__item">
-                  <h4>Полная поддержка</h4>
+                <li class="bullet_list__item buy__card__item h4">
+                  Полная поддержка
                 </li>
-                <li class="bullet_list__item buy__card__item">
-                  <h4>Регулярные обновления</h4>
+                <li class="bullet_list__item buy__card__item h4">
+                  Регулярные обновления
                 </li>
-                <li class="bullet_list__item buy__card__item">
-                  <h4>Консервативная стратегия</h4>
+                <li class="bullet_list__item buy__card__item h4">
+                  Консервативная стратегия
                 </li>
               </ul>
             </div>
@@ -925,23 +956,23 @@
               </div>
 
               <ul class="buy__card__list">
-                <li class="bullet_list__item buy__card__item">
-                  <h4>Бот для МТ4</h4>
+                <li class="bullet_list__item buy__card__item h4">
+                  Бот для МТ4
                 </li>
-                <li class="bullet_list__item buy__card__item">
-                  <h4>Полная поддержка</h4>
+                <li class="bullet_list__item buy__card__item h4">
+                  Полная поддержка
                 </li>
-                <li class="bullet_list__item buy__card__item">
-                  <h4>Регулярные обновления</h4>
+                <li class="bullet_list__item buy__card__item h4">
+                  Регулярные обновления
                 </li>
-                <li class="bullet_list__item buy__card__item">
-                  <h4>Консервативная стратегия</h4>
+                <li class="bullet_list__item buy__card__item h4">
+                  Консервативная стратегия
                 </li>
-                <li class="bullet_list__item buy__card__item">
-                  <h4>Агрессивная стратегия</h4>
+                <li class="bullet_list__item buy__card__item h4">
+                  Агрессивная стратегия
                 </li>
-                <li class="bullet_list__item buy__card__item">
-                  <h4>Доступ в сообщество</h4>
+                <li class="bullet_list__item buy__card__item h4">
+                  Доступ в сообщество
                 </li>
               </ul>
             </div>
@@ -960,23 +991,23 @@
               </div>
 
               <ul class="buy__card__list">
-                <li class="bullet_list__item buy__card__item">
-                  <h4>Бот для МТ4</h4>
+                <li class="bullet_list__item buy__card__item h4">
+                  Бот для МТ4
                 </li>
-                <li class="bullet_list__item buy__card__item">
-                  <h4>Полная поддержка</h4>
+                <li class="bullet_list__item buy__card__item h4">
+                  Полная поддержка
                 </li>
-                <li class="bullet_list__item buy__card__item">
-                  <h4>Регулярные обновления</h4>
+                <li class="bullet_list__item buy__card__item h4">
+                  Регулярные обновления
                 </li>
-                <li class="bullet_list__item buy__card__item">
-                  <h4>Консервативная стратегия</h4>
+                <li class="bullet_list__item buy__card__item h4">
+                  Консервативная стратегия
                 </li>
-                <li class="bullet_list__item buy__card__item">
-                  <h4>Агрессивная стратегия</h4>
+                <li class="bullet_list__item buy__card__item h4">
+                  Агрессивная стратегия
                 </li>
-                <li class="bullet_list__item buy__card__item">
-                  <h4>Доступ в сообщество</h4>
+                <li class="bullet_list__item buy__card__item h4">
+                  Доступ в сообщество
                 </li>
               </ul>
             </div>
@@ -1262,7 +1293,7 @@
     <div class="modals">
       <div id="footer-modal-1" class="footer__modal">
         <div class="footer__modal_content">
-          <button class="cross footer__modal__cross">
+          <button class="cross footer__modal__cross" aria-label="close">
             <span class="cross__bar"></span>
             <span class="cross__bar"></span>
           </button>
@@ -1272,7 +1303,7 @@
       </div>
       <div id="footer-modal-2" class="footer__modal">
         <div class="footer__modal_content">
-          <button class="cross footer__modal__cross">
+          <button class="cross footer__modal__cross" aria-label="close">
             <span class="cross__bar"></span>
             <span class="cross__bar"></span>
           </button>
@@ -1283,7 +1314,7 @@
 
       <div id="footer-modal-3" class="footer__modal">
         <div class="footer__modal_content">
-          <button class="cross footer__modal__cross">
+          <button class="cross footer__modal__cross" aria-label="close">
             <span class="cross__bar"></span>
             <span class="cross__bar"></span>
           </button>
@@ -1294,7 +1325,7 @@
 
       <div id="footer-modal-4" class="footer__modal">
         <div class="footer__modal_content">
-          <button class="cross footer__modal__cross">
+          <button class="cross footer__modal__cross" aria-label="close">
             <span class="cross__bar"></span>
             <span class="cross__bar"></span>
           </button>
@@ -1305,7 +1336,7 @@
 
       <div id="footer-modal-5" class="footer__modal">
         <div class="footer__modal_content">
-          <button class="cross footer__modal__cross">
+          <button class="cross footer__modal__cross" aria-label="close">
             <span class="cross__bar"></span>
             <span class="cross__bar"></span>
           </button>
@@ -1315,11 +1346,13 @@
       </div>
     </div>
 
-    <script src="script.js"></script>
     <script type="module">
       const canvas = document.getElementById("canvas3d");
       const introImage = document.getElementById("intro-image");
       const canvasLoader = document.getElementById("canvas-loader");
+
+      const shouldShow3d =
+        window.innerWidth >= 1024 && window.WebGLRenderingContext;
 
       if (shouldShow3d) {
         import("./runtime.js")
@@ -1346,6 +1379,53 @@
             canvasLoader.style.display = "none";
           });
       }
+    </script>
+    <script src="script.js"></script>
+    <script type="module">
+      function loadScript(url) {
+        return new Promise((resolve, reject) => {
+          const script = document.createElement("script");
+          script.src = url;
+          script.onload = resolve;
+          script.onerror = reject;
+          script.defer = true;
+          document.head.appendChild(script);
+        });
+      }
+
+      // Swiper
+      loadScript(
+        "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+      ).then(() => {
+        if (typeof Swiper !== "undefined") {
+          new Swiper(".swiper", {
+            direction: "horizontal",
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+            spaceBetween: 16,
+            slidesPerView: "auto",
+            breakpoints: {
+              1024: {
+                slidesPerView: 4,
+                spaceBetween: 36,
+              },
+            },
+          });
+        }
+      });
+
+      // baguetteBox
+      loadScript(
+        "https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.0/baguetteBox.min.js"
+      ).then(() => {
+        if (typeof baguetteBox !== "undefined") {
+          baguetteBox.run(".gallery", {
+            noScrollbars: true,
+          });
+        }
+      });
     </script>
   </body>
 </html>

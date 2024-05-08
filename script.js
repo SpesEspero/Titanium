@@ -43,26 +43,6 @@ if (anchorLinks) {
   });
 }
 
-// Swiper
-
-if (Swiper) {
-  const swiper = new Swiper(".swiper", {
-    direction: "horizontal",
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    spaceBetween: 16,
-    slidesPerView: "auto",
-    breakpoints: {
-      1024: {
-        slidesPerView: 4,
-        spaceBetween: 36,
-      },
-    },
-  });
-}
-
 // FAQ
 
 const faqButtons = document.querySelectorAll(".faq__button");
@@ -116,13 +96,3 @@ window.onclick = function (event) {
     event.target.classList.remove("active");
   }
 };
-
-// Lightbox
-
-if (baguetteBox) {
-  baguetteBox.run(".gallery");
-}
-
-// Should show 3d
-
-window.shouldShow3d = window.innerWidth >= 1024 && window.WebGLRenderingContext;
