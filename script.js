@@ -1,6 +1,9 @@
 const headerBurger = document.getElementById("menu-btn");
 const header = document.getElementById("header");
 
+const lockBody = () => document.body.classList.add("lock");
+const unlockBody = () => document.body.classList.remove("lock");
+
 if (headerBurger && header) {
   headerBurger.addEventListener("click", () => {
     header.classList.toggle("active");
@@ -32,7 +35,7 @@ if (anchorLinks) {
 
       if (elementToScroll) {
         header.classList.remove("active");
-        document.body.classList.remove("lock");
+        unlockBody();
 
         document.querySelector(id).scrollIntoView({
           behavior: "smooth",
@@ -63,7 +66,7 @@ if (faqButtons) {
   });
 }
 
-// Modal
+// Footer Modal
 
 const modalBtns = document.querySelectorAll(".footer__button");
 
@@ -76,6 +79,7 @@ if (modalBtns) {
 
       if (modal) {
         modal.classList.add("active");
+        lockBody();
       }
     });
   });
@@ -86,7 +90,9 @@ const closeBtns = document.querySelectorAll(".footer__modal__cross");
 if (closeBtns) {
   closeBtns.forEach(function (btn) {
     btn.addEventListener("click", function () {
-      this.closest(".footer__modal").style.display = "none";
+      this.closest(".footer__modal").classList.remove("active");
+      unlockBody();
+      window.history.pushState("", document.title, window.location.pathname);
     });
   });
 }
@@ -94,5 +100,17 @@ if (closeBtns) {
 window.onclick = function (event) {
   if (event.target.classList.contains("footer__modal")) {
     event.target.classList.remove("active");
+    unlockBody();
+    window.history.pushState("", document.title, window.location.pathname);
   }
 };
+
+document.addEventListener("DOMContentLoaded", function () {
+  const modal = document.querySelector(
+    `.footer__button[href='${window.location.hash}']`
+  );
+
+  if (modal) {
+    modal.click();
+  }
+});
